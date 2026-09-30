@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.TimetableAlarm" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/brand</item>
+    </style>
+    <style name="Theme.TimetableAlarm.Alarm" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="android:windowBackground">@color/alarm_bg</item>
+    </style>
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수업 몇 분 전에 알람? (0 = 정각)" />
+
+        <EditText
+            android:id="@+id/setBefore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="기본 수업 길이 (분)" />
+
+        <EditText
+            android:id="@+id/setLength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="교시별 시작 시각 (쉼표로 구분)\n사진에 시간이 없고 '1교시, 2교시'만 있을 때 사용" />
+
+        <EditText
+            android:id="@+id/setPeriods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="08:40,09:40,10:40"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/setVibrate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="진동" />
+    </LinearLayout>
+</ScrollView>

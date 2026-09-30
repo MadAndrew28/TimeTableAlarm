@@ -1,0 +1,46 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.timetablealarm'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.example.timetablealarm"
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            // 개인 설치용: 디버그 키로 서명해서 바로 설치 가능한 release APK 생성
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'androidx.exifinterface:exifinterface:1.3.7'
+    implementation 'androidx.core:core:1.13.1'
+    // 온디바이스 한국어 OCR (모델이 APK에 포함되어 오프라인 동작)
+    implementation 'com.google.mlkit:text-recognition-korean:16.0.1'
+
+    testImplementation 'junit:junit:4.13.2'
+}

@@ -1,0 +1,7 @@
+<resources>
+    <!-- Android 15의 강제 edge-to-edge를 끄고 기존처럼 상태바/내비게이션바 영역을 비워둠 -->
+    <style name="Theme.TimetableAlarm" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/brand</item>
+        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
+    </style>
+</resources>
